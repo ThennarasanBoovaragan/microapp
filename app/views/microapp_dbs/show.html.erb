@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @microapp_db.Author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @microapp_db.Title %>
+</p>
+
+<p>
+  <strong>Creationdate:</strong>
+  <%= @microapp_db.CreationDate %>
+</p>
+
+<%= link_to 'Edit', edit_microapp_db_path(@microapp_db) %> |
+<%= link_to 'Back', microapp_dbs_path %>

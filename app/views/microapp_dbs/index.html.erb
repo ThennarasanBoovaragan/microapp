@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Microapp Dbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Creationdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @microapp_dbs.each do |microapp_db| %>
+      <tr>
+        <td><%= microapp_db.Author %></td>
+        <td><%= microapp_db.Title %></td>
+        <td><%= microapp_db.CreationDate %></td>
+        <td><%= link_to 'Show', microapp_db %></td>
+        <td><%= link_to 'Edit', edit_microapp_db_path(microapp_db) %></td>
+        <td><%= link_to 'Destroy', microapp_db, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Microapp Db', new_microapp_db_path %>

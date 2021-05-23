@@ -1,0 +1,32 @@
+<%= form_with(model: microapp_db) do |form| %>
+  <% if microapp_db.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(microapp_db.errors.count, "error") %> prohibited this microapp_db from being saved:</h2>
+
+      <ul>
+        <% microapp_db.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Author %>
+    <%= form.text_field :Author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CreationDate %>
+    <%= form.text_field :CreationDate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

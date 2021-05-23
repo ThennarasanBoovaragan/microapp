@@ -1,0 +1,2 @@
+class MicroappDb < ApplicationRecord
+end
